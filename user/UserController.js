@@ -3,6 +3,7 @@ var express = require('express');
 var router = express.Router();
 var bodyParser = require('body-parser');
 router.use(bodyParser.urlencoded({ extended: true }));
+
 var User = require('./User');
 
 
@@ -26,6 +27,29 @@ router.get('/', function (req, res) {
     });
 });
 
+// GETS A SINGLE USER FROM THE DATABASE
+router.get('/:id', function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) return res.status(500).send("There was a problem finding the user.");
+        if (!user) return res.status(404).send("No user found.");
+        res.status(200).send(user);
+    });
+});
+
+// DELETES A USER FROM THE DATABASE
+router.delete('/delete/:id', function (req, res) {
+    User.findByIdAndRemove(req.params.id, function (err, user) {
+        if (err) return res.status(500).send("There was a problem deleting the user.");
+        res.status(200).send("User "+ user.name +" was deleted.");
+    });
+});
+//Only Enable to delete database for testing
+// router.delete('/', function(req, res) {
+// 	User.remove({}, function(err, users) {
+// 		 if (err) return res.status(500).send("There was a problem deleting all users.");
+//        	 res.status(200).send("All users have been deleted.");
+// 	});
+// });
 
 
 module.exports = router;
