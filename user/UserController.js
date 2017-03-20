@@ -8,11 +8,12 @@ var User = require('./User');
 
 
 // CREATES A NEW USER
-router.post('/', function (req, res) {
+router.post('/signup', function (req, res) {
     User.create({
             name : req.body.name,
             email : req.body.email,
-            password : req.body.password
+            password : req.body.password,
+            account: 0
         }, 
         function (err, user) {
             if (err) return res.status(500).send("There was a problem adding the information to the database.");
@@ -36,20 +37,34 @@ router.get('/:id', function (req, res) {
     });
 });
 
+//UPDATES SINGLE USER IN DATABASE
+router.put('/:id', function(req, res) {
+	User.findByIdAndUpdate(req.params.id, req.body, {new: true}, 
+		function(err, user) {
+			if (err) return res.status(500).send("There was a problem updating the user.");
+				res.status(200).send(user);
+		});
+});
+
+
+
+
+
 // DELETES A USER FROM THE DATABASE
-router.delete('/delete/:id', function (req, res) {
+router.delete('/:id', function (req, res) {
     User.findByIdAndRemove(req.params.id, function (err, user) {
         if (err) return res.status(500).send("There was a problem deleting the user.");
         res.status(200).send("User "+ user.name +" was deleted.");
     });
 });
 //Only Enable to delete database for testing
-// router.delete('/', function(req, res) {
-// 	User.remove({}, function(err, users) {
-// 		 if (err) return res.status(500).send("There was a problem deleting all users.");
-//        	 res.status(200).send("All users have been deleted.");
-// 	});
-// });
+router.delete('/', function(req, res) {
+	User.remove({}, function(err, users) {
+		 if (err) return res.status(500).send("There was a problem deleting all users.");
+       	 res.status(200).send("All users have been deleted.");
+	});
+});
+
 
 
 module.exports = router;
