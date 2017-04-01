@@ -1,0 +1,202 @@
+
+
+a:link{
+	text-decoration: none;
+	color: white;
+}
+
+a:visited{
+	text-decoration: none;
+	color: white;
+}
+
+a:hover{
+	text-decoration: none;
+	color: white;
+	background-color: white;
+}
+
+a:active{
+	text-decoration: none;
+	color: white;
+}
+
+#body{
+	background-color: white;
+}		
+
+
+#left_body{
+	width: 59%;
+	height: 1110px;
+	margin-top: 3%;
+	margin-left: 5.4%;
+	background-color: white;
+	float: left;
+
+}
+
+#middle_line{
+	width: 0.2%;
+	height: 1110px;
+	margin-top: 3%;
+	background-color: black;
+	float: left;
+}
+
+#right_body{
+	width: 30%;
+	height: 1110px;
+	margin-top: 3%;
+	margin-right: 5.4%;
+	background-color: white;
+	float:left;
+}
+
+#logo_space{
+	background: url('../resource/21490747839_.pic_hd.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#head_div{
+	height: 11.7%;
+	width: 100%;
+	background-color: white;	
+}
+
+#head_text{
+	font-family: 'Raleway', sans-serif;
+	font-size: 65px;
+	font-weight: 900;
+	color: black;
+	opacity: 1;
+}
+
+#left_middle_line{
+
+	width: 100%;
+	height: 2px;
+	background-color: black;
+}
+
+#navigation{
+
+	width: 59%;
+	height: 800px;
+	float: left;
+	background-color: rgb(207,106,77);
+}
+
+div.opt{
+	border-radius: 2px;
+	box-shadow: 0 0 10px 4px rgba(0,0,0,0.2); 
+}
+
+#opt1,#opt2, #opt3,#opt4,#opt5, #opt6{
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+}
+#opt1{
+
+	width: 53%;
+	height: 150px;
+	margin-top: 5%;
+	background-color: orange;
+}
+
+#opt2{
+			
+	width: 29%;
+	height: 110px;
+	float: left;
+
+	margin-top: 7.5%;
+	margin-left: 12.5%;
+	background-color: rgb(226,226,226);
+}
+
+#opt3{	
+	width: 35%;
+	height: 120px;
+	float: right;
+
+	margin-top: -10%;
+	margin-right: 7.5%;
+	background-color: rgb(226,226,226);
+}
+#opt4{
+	
+	width: 25%;
+	height: 200px;
+	float: right;
+	margin-top: 8%;
+	margin-right: 22%;
+	background-color: orange;
+}
+
+#opt5{
+				
+	width: 25%;
+	height: 500px;
+	float: left;
+	margin-top: 8%;
+	margin-left: 2%;
+	background-color: green;
+}
+
+#Compo_text{
+	color: white;
+}
+
+#opt6{
+
+	width: 38%;
+	height: 185px;
+	float: left;
+	margin-top: 8%;
+	margin-left: 15%;
+	background-color: rgb(226,226,226);
+}
+
+#logo_space{
+
+	width: 100%;
+	height: 26.7%;
+	float: left;
+	background-color: white;
+	padding-bottom:25px;
+}
+
+
+#right_middle_line{
+
+	width: 100%;
+	height: 2px;
+	float: left;
+	background-color: black;
+}
+
+#selection_bar{
+
+	width: 100%;
+	height: 56%;
+	float: left;
+	background-color: black;
+}
+
+#b1,#b2,#b3,#b4,#b5,#b6,#b7{
+	width: 25%;
+	height: 9%;
+	margin-top: 5%;
+	margin-left: 7%;
+	border-radius: 2px;
+	float: left;
+	text-align: center;
+	padding-top: 4%;
+	font-family: 'Questrial', sans-serif; 
+	color: white;
+	border: white solid 1px;
+
+}
+

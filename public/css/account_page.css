@@ -1,0 +1,55 @@
+#account{
+
+	margin-top: 5%;
+	margin-bottom: 7%;
+	height: 55%;
+	background-color: rgb(236,236,236);
+	padding-top: 5%;
+
+}
+
+#name_bar, #value_bar, #account_number_bar{
+
+	position: relative;
+	margin-left: 5%;
+	margin-top: 4%;
+	width: 60%;
+	height: 50px;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#name_bar{
+	
+}
+
+#name_title, #account_number_title, #value_title{
+	float: left;
+	text-align: center;
+	color: white;
+	width: 16%;
+	height: 50px;
+	border-radius: 2px;
+	background-color: rgb(76,76,76);
+	padding-top: 5px;
+
+}
+
+#name_from_server, #account_number_from_server, #value_from_server{
+	float: left;
+	text-align: center;
+	color: black;
+	height: 50px;
+	border-radius: 2px;
+	padding-top: 5px;
+	
+}
+
+#contact_us_link{
+	padding-bottom: 20px;
+	height: 30px;
+}
+
+a{
+	text-decoration: none;
+}

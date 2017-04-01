@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up/In</title>
+	<meta charset="UTF-8">
+
+	
+	<!-- Bootstrap Css -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    	<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Dosis|Muli|Questrial|Raleway|Roboto" rel="stylesheet">
+
+	<!--External CSS files-->
+    <link rel="stylesheet" type="text/css" href="./css/sign_up_or_in.css">
+	<link rel="stylesheet" type="text/css" href="./css/contacts_StyleSheet.css">
+
+
+
+ 
+</head>
+<body>
+	<div id = "nav_bar"> 
+
+		<div id = "logo_box"><a href="/"></a></div>
+
+		<div id = "home_link"><a href="/"><h5>Home</h5></a></div>
+
+		<div id = "facelogin"><a href="/users/face"><h7>Facial Login</h7></a></div>
+
+		<div id = "share_link"><h5>Share</h5></div>
+		
+		<div id = "loginstatus">Please login or register</div>
+
+		<div id = "logoutnow"><a href="/users/logout"><h6>Log Out</h6></a></div>
+
+			
+	</div>
+
+	<div class="container">
+    	<div class="row">
+			<div class="col-md-6 col-md-offset-6">
+				<div class="panel panel-login">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-xs-6">
+								<a href="users/login" class="active" id="login-form-link">Login</a>
+							</div>
+							<div class="col-xs-6">
+								<a href="users/signup" class="active" id="register-form-link">Register</a>
+							</div>
+						</div>
+						<hr>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-12">
+								<form id="login-form" action="/users/login" method="post" role="form" style="display: block;">
+									<div class="form-group">
+										<input type="text" name="email" id="email" tabindex="1" class="form-control" placeholder="Email" value="">
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+									</div>
+
+ 									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-lg-12">
+
+ 											</div>
+										</div>
+									</div>
+								</form>
+								<form id="register-form" action="/users/signup" method="post"  style="display: none;">
+									<div class="form-group">
+										<input type="text" name="name" id="name" tabindex="1" class="form-control" placeholder="Full Name" value="">
+									</div>
+									<div class="form-group">
+										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id = "bottom_bar">
+
+		<div id = "more_help">
+			<h4>Need More Help?</h4>
+		</div>
+		<div id = "contact_us_link">
+			<a href="/contact">
+			<h6>Contact Us</h6>
+			</a>
+		</div>
+
+		<div id = "follow_us_bar">
+			<div id = "follow_us"><h4>Follow Us</h4></div>
+			<a href="http://www.google.com">
+				<div id= "facebook_link">
+				
+				</div>
+			</a>
+
+			<a href="">
+				<div id = "twitter_link">
+					
+				</div>
+			</a>
+
+			<a href="">
+				<div id = "instagram_link">
+					
+			</a>
+		</div>
+
+	</div>
+	<!-- Bootstrap and JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+       <script type="text/javascript">
+
+    	$(function() {
+    		var signupurl = 'http://' + window.location.host + '/users/signup';
+    		var loginurl = 'http://' + window.location.host +'/users/login';
+    		//Dynamically change form when clicking on 'Register' vs 'Login'	
+	    	$('#login-form-link').click(function(e) {
+				$("#login-form").delay(100).fadeIn(100);
+		 		$("#register-form").fadeOut(100);
+				$('#register-form-link').removeClass('active');
+				$(this).addClass('active');
+				e.preventDefault();
+			});
+			$('#register-form-link').click(function(e) {
+				$("#register-form").delay(100).fadeIn(100);
+		 		$("#login-form").fadeOut(100);
+				$('#login-form-link').removeClass('active');
+				$(this).addClass('active');
+				e.preventDefault();
+			});
+			//Changes current url link based on button click
+			if(location.href === signupurl)
+				$('#register-form-link').trigger('click');
+			else if (location.href === loginurl) 
+				$('#login-form-link').trigger('click');
+			//Dynamically change login status based on current login status
+			$.get("/users/checkauth", function(data) {
+				  	$('#loginstatus').html("Welcome " + data.name + "!");
+			});
+		});
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+#facial_login{
+
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 5%;
+	height: 50%;
+	background-color: rgb(236,236,236);
+
+	padding-top: 5%;
+
+}
+
+#picture_area, #inputs_area{
+
+	float: left;
+	height: 80%;
+	margin-left: 2%;
+	border-radius: 2px;
+
+}
+
+#picture_area{
+	width: 60%;
+	background-color: black;
+}
+
+#inputs_area{
+	width: 32%;
+	padding-top: 4%;
+	padding-left: 2%;
+	background-color: black;
+}
+
+#enroll, #verify, #email{
+
+	height: 30px;
+	float: left;
+	border-radius: 2px;
+	font-family: 'Questrial', sans-serif;
+	
+}
+
+#email{
+	width: 90%;
+	margin-bottom: 7%;
+}
+
+#verify, #enroll{
+	width: 25%;
+	height: 40px;
+	text-align: center;
+	background-color: black;
+	color: white;
+	border: none;
+	font-size: 12px;
+	padding-bottom: 10px;
+	
+}
+
+#verify:hover{
+	color: black;
+	background-color: white;
+}
+
+#enroll:hover{
+	color: black;
+	background-color: white;
+}
+#enroll{
+	margin-left: 5%;
+
+}
+
+.from-group{
+	width: 100%;
+	height: 100px;
+	background-color: black;
+}
+
+#video, #canvas{
+	margin-left: 2%;
+	width: 36%;
+	float: left;
+	border-radius: 2px;
+}
+
+#canvas{
+	margin-top: 2%;
+}
+
+#startbutton{
+	width: 13%;
+	margin-left: 10%;
+	margin-top: 30%;
+	border-radius: 2px;
+	background-color: black;
+	color: white;
+	text-align: center;
+	border: white solid 1px;
+	font-family: 'Questrial', sans-serif;
+
+}

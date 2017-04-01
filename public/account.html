@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>My Account</title>
+
+	<!-- Bootstrap Css -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Dosis|Muli|Questrial|Raleway|Roboto" rel="stylesheet">
+
+	<!-- CSS files-->
+	<link rel="stylesheet" type="text/css" href="../css/contacts_StyleSheet.css">
+	<link rel="stylesheet" type="text/css" href="../css/sign_up_or_in.css">
+	<link rel="stylesheet" type="text/css" href="../css/account_page.css">
+
+
+</head>
+<body>
+
+	<div id = "nav_bar"> 
+
+		<div id = "logo_box"><a href="/"></a></div>
+
+		<div id = "home_link"><a href="/"> <h5>Home</h5></a></div>
+
+		<div id = "facelogin"><a href="/users/face">Facial Login</a></div>
+
+		<div id = "share_link"><h5>Share</h5></div>
+
+		<div id = "loginstatus">Please login or register</div>
+
+		<div id = "logoutnow"><a href="/users/logout"><h6>Log Out</h6></a></div>
+			
+	</div>
+
+
+	<div id = "account">
+		
+		<div id = "name_bar">
+			<div id = "name_title"><h5>Name</h5></div>
+			<div class = "serverside" id = "name_from_server"></div>
+		</div>
+
+		<div id = "account_number_bar">
+			<div id = "account_number_title"><h5>Account #</h5></div>
+			<div class = "serverside" id = "account_number_from_server"></div>
+		</div>
+
+	</div>
+
+
+	<div id = "bottom_bar">
+
+		<div id = "more_help">
+			<h4>Need More Help?</h4>
+		</div>
+		<div id = "contact_us_link">
+			<a href="/contact"><h5>Contact</h5></a>
+		</div>
+
+		<div id = "follow_us_bar">
+			<div id = "follow_us"><h4>Follow Us</h4></div>
+			<a href="http://www.google.com">
+				<div id= "facebook_link">
+				
+				</div>
+			</a>
+
+			<a href="">
+				<div id = "twitter_link">
+					
+				</div>
+			</a>
+
+			<a href="">
+				<div id = "instagram_link">
+					
+			</a>
+		</div>
+
+	</div>
+	<!-- Bootstrap and JQuery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script>
+			$.get("/users/checkauth", function(data) {
+				  	$('#loginstatus').html("Welcome " + data.name + "!");
+			});
+					$(function() {
+    					function reloadAccount(){
+        					$.getJSON('/account/balance', function(data) {
+        						$('#account_number_from_server').html("$ " + data.account);
+        						$('#name_from_server').html(data.name);
+        					});
+    					}
+    					setInterval(reloadAccount, 1000 );
+					});
+					$.get("/account/balance", function(data) {
+				  		
+				  		
+				  	});
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+
+a:link{
+	text-decoration: none;
+	color: white;
+}
+
+a:visited{
+	text-decoration: none;
+	color: white;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+a:active{
+	text-decoration: none;
+	color: white;
+}
+
+html, body {
+    height: 100%;
+}
+
+iframe, #nav_bar, #main, #subcribe, #empty_bar{
+	margin: 2% 4.5% 0% 4.5%;
+}
+
+#nav_bar{
+	width: 91%;
+	height: 75px;
+	background-color: white;
+	border-radius: 2px;
+	box-shadow: 0 0 11px 5px rgba(0,0,0,0.09); 
+
+}
+
+#logo_box, #home_link, #join_us_link, #share_link, #loginstatus, #facelogin, #logoutnow{
+
+	position: relative;
+	width: 7.5%;
+	height: 45px;
+	border-radius: 3px;
+	background-color: black;
+	margin-left: 1.5%;
+	margin-top: 15px;
+	float: left;
+	text-align: center;
+	padding-top: 6px;
+	font-family: 'Questrial', sans-serif;
+
+}
+
+
+#logo_box{
+	
+	width: 9%;
+	border-radius: 0px;
+	border-style: solid;
+	border-color: white rgb(226,226,226) white white;
+	border-right-width: 2px;
+	background-color: white;
+
+}
+
+
+#facelogin{
+	padding-top: 13px;
+}
+
+
+#share_link{
+	background-color: orange;
+}
+
+#loginstatus{
+	width: 15%;
+	margin-left: 40%;
+	font-family: 'Muli', sans-serif;
+	padding-top: 12px;
+	color: rgb(216, 216, 216);
+	background-color: rgb(246,246,246);
+}
+
+#logoutnow{
+
+	width: 4%;
+	font-family: 'Muli', sans-serif;
+	text-align: center;
+	color: rgb(216, 216, 216);
+	background-color: rgb(246,246,246);
+
+}
+
+#main{
+
+	height: 65%;
+	background-color: rgb(200,200,200);
+	padding-top: 5%;
+}
+
+#article_title{
+	margin-left: 5%;
+	font-family: 'Muli', sans-serif;
+	font-weight: 2000;
+	color: white;
+}
+
+#content{
+	width: 45%;
+	margin-left: 12%;
+	margin-top: 3%;
+	font-family: 'Muli', sans-serif;
+	font-weight: 400;
+	color: white;
+	float: left;
+}
+
+#e_a1{
+	text-align: left;
+	float: left;
+}
+
+#advice_bar{
+	margin: 6% 0% 0% 0%;
+	height: 130px;
+	background-color: black;
+}
+
+#more_advice{
+
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: 35%;
+	margin-right: 5%;
+	float: left;
+
+	font-family: 'Questrial', sans-serif; 
+	font-stretch: ultra-expanded;
+	color: white;
+
+}
+
+#email_us_link{
+
+	width: 7.5%;
+	height: 40px;
+	margin-top: 50px;
+	margin-bottom: 40px;
+	border-radius: 2px;
+	float: left;
+	padding-top: 10px;
+	text-align: center;
+	color: white;
+}
+
+#subcribe{
+
+	height: 7%;
+	background-color: red;
+	margin-top: 4%;
+}
+
+#empty_bar{
+
+	height: 10%;
+	background-color: white;
+}
+
+iframe{
+	margin-top: 3%;
+	width: 30%; 
+	height: 55%; 
+	border:0;
+	float: left;
+}
+
+
+
+
